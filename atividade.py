@@ -1,29 +1,53 @@
-COMPRAS = ["arroz", "feijão", "macarrão", "leite", "açúcar"]
+#Atividade - Manipulção de Listas em Python
 
-print("Lista inicial:", COMPRAS)
+numeros = [10, 20, 30, 40, 20, 50]
 
-# Adiciona no final
-COMPRAS.append("café")
-print("Após append():", COMPRAS)
+# 1) Quantos elementos existem na lista
+print("Quantidade de elementos:", len(numeros))
 
-# Insere em uma posição específica
-COMPRAS.insert(1, "óleo")
-print("Após insert():", COMPRAS)
+# 2) Quantas vezes o número 20 aparece
+print("Quantas vezes 20 aparece:", numeros.count(20))
 
-# Adiciona mais de um item
-COMPRAS.extend(["biscoito", "refrigerante"])
-print("Após extend():", COMPRAS)
+# 3) Posição do número 30
+print("Posição do número 30:", numeros.index(30))
 
-# Remove um item pelo nome
-COMPRAS.remove("açúcar")
-print("Após remove():", COMPRAS)
+# Verificar se 100 está na lista
+print("100 está na lista?", 100 in numeros)
 
-# Remove o último item
-removido = COMPRAS.pop()
-print(f"Removido: {removido}")
-print("Após pop():", COMPRAS)
 
-# Remove pelo índice
-removido2 = COMPRAS.pop(1)
-print(f"Removido do índice 1: {removido2}")
-print("Lista final:", COMPRAS)
+import random
+
+# Lista inicial
+numeros = [91, 34, 67, 15, 82]
+
+# Mostrar lista original
+print("Lista original:", numeros)
+
+# Ordem crescente
+numeros.sort()
+print("Ordem crescente:", numeros)
+
+# Ordem decrescente
+numeros.sort(reverse=True)
+print("Ordem decrescente:", numeros)
+
+# Segunda lista
+dados = [80, 7, 10, 9, 19]
+
+# Embaralhar lista
+random.shuffle(dados)
+print("Lista embaralhada:", dados)
+
+# Desafio
+lista3 = [5, 12, 8, 20, 3, 15]
+
+print("Terceira lista:", lista3)
+
+lista3.sort()
+print("Crescente:", lista3)
+
+lista3.sort(reverse=True)
+print("Decrescente:", lista3)
+
+random.shuffle(lista3)
+print("Embaralhada:", lista3)
